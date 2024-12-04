@@ -68,8 +68,6 @@ if (objToRender === "car") {
   controls = new OrbitControls(camera, renderer.domElement);
 }
 
-// Função para imprimir a posição da câmera
-
 //Renderiza a cena
 function animate() {
   requestAnimationFrame(animate);
@@ -78,10 +76,12 @@ function animate() {
   //logCameraPosition();
 }
 
+// Função para imprimir a posição da câmera
 function logCameraPosition() {
   console.log(`Camera Position: x=${camera.position.x}, y=${camera.position.y}, z=${camera.position.z}`);
 }
 
+// Função para verificar a posição da câmera
 window.addEventListener("keydown", function (e) {
   if (e.key === ' ') {
     logCameraPosition();
